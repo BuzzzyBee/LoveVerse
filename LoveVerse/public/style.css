@@ -1,0 +1,134 @@
+/* Resetting default margin/padding for better control */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background: linear-gradient(45deg, rgba(255, 85, 85, 0.8), rgba(255, 175, 175, 0.8), rgba(255, 0, 127, 0.7));
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    overflow: hidden;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 30px;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    animation: fadeIn 2s ease-out;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    color: #fff;
+    text-shadow: 0 0 15px #ff0066, 0 0 30px #ff66b2;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #ffb3cc;
+    font-style: italic;
+}
+
+.buttons button {
+    background: #ff0066;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    margin: 15px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.buttons button:hover {
+    background: #ff4da6;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+/* Animation for fade-in */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* VR-themed Heartbeat Animation */
+.heartbeat {
+    font-size: 3rem;
+    color: #ff4da6;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Floating Techy Effects */
+.floating-tech {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    color: #ff66cc;
+    animation: floatTech 5s ease-in-out infinite;
+}
+
+@keyframes floatTech {
+    0% { transform: translateY(-10px); }
+    50% { transform: translateY(10px); }
+    100% { transform: translateY(-10px); }
+}
+
+/* VR bubble effect to add more playful feel */
+.vr-bubble {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: rgba(255, 0, 127, 0.5);
+    animation: bubbleMove 4s ease-in-out infinite;
+}
+
+@keyframes bubbleMove {
+    0% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-100px) rotate(180deg); }
+    100% { transform: translateY(0) rotate(360deg);}
+}

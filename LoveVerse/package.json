@@ -1,0 +1,21 @@
+{
+  "name": "loveverse",
+  "version": "1.0.0",
+  "description": "LoveVerse - Your portal to enchanting AI romance",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Cupcake",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "body-parser": "^2.2.0",
+    "connect-mongo": "^5.1.0",
+    "dotenv": "^16.5.0",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "mongoose": "^8.13.2",
+    "path": "^0.12.7"
+  }
+}
